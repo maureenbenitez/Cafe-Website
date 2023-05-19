@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MVD MidnightCafe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https:stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script type="text/javascript">
+  function confirmation() {
+    var x1 = document.getElementById('name').value;
+    var x2 = document.getElementById('address').value;
+    var x3 = document.getElementById('contact').value;
+    var x4 = document.getElementById('guest').value;
+    var x5 = document.getElementById('mode').value;
+    var x6 = document.getElementById('time').value;
+    var x7 = document.getElementById('date').value;
+    window.confirm(" Detail Confirmation\n\n Name: " + x1 + "\n Address: " + x2 + "\n Contact: " + x3 + "\n\n Number of Guests: " + x4 + "\n Mode of Payment: " + x5 + "\n Time: " + x6 + "\n Date: " + x7 + "\n\n THANK YOU FOR BOOKING, SEE YOU!");
+  }
+  function clear() {
+    document.getElementById("form").reset();
+  }
+</script>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#"><img alt="logo" src="MVD.png" width="150" height="55">
+        </a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Menu">Menu</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <div class="image"><b> <img src="MVD.png" style="width:37%;" style="height:37%;"></b></div>
+    <div class="sub_title"><b>Midnight Cafe</b></div>
+    <br>
+    <div class="center-white-button">
+      <a href="#reservation">BOOK A TABLE</a>
+    </div>
+  </div>
+  <img src="bg.jpg" alt="Cafe" style="width:100%; height:691px;">
+  <left>
+    <a name="About"></a>
+    <div class="about">
+      <div class="title-about">
+        <h1><br>WHO WE ARE</h1>
+        <p>Midnight Cafe is a local brand established by a group of friends aiming to produce<br>and share quality
+          product but service as well, focusing on using eco-friendly packaging<br>while serving each of our customer
+          with a smile.<br><br>We welcome everyone and we look forward to seeing you soon!</p>
+      </div>
+    </div>
+  </left>
+  <a name="Menu"></a>
+  <div class="menu">
+    <h1><br>Menu<br></h1>
+    <div class="menulist">
+      <img src="menulist.png">
+    </div>
+    <div class="menu-container" hspace=30 vspace=5 width="250" height="250" border="1">
+      <img src="coffee.jpg">
+      <img src="frappe.jpg">
+      <img src="cake.jpg">
+      <img src="pastry.jpg">
+    </div>
+  </div>
+  <a name="Contact"></a>
+  <center>
+    <div>
+      <div class="contact">
+        <h1><br><br>Contact<br><br></h1>
+        <div class="contactpic">
+          <div class="row">
+            <img src="maureen.jpg">
+            <div class="name"> Maureen Benitez<br>CEO<br>maureenasirit.benitez@bicol-u.edu.ph</div>
+          </div>
+          <div class="row">
+            <img src="diogenes.jpg">
+            <div class="name"> Diogenes Tayam<br>COO<br>diogenesiiiaraojo.tayam@bicol-u.edu.ph</div>
+          </div>
+          <div class="row">
+            <img src="vivian.jpg">
+            <div class="name"> Vivian Vivo<br>CMO<br>vivianprimavera.vivo@bicol-u.edu.ph</div>
+          </div>
+        </div>
+      </div>
+      <section class="section" id="reservation">
+        <div class="wrapper">
+          <div class="container">
+            <form action="" class="form">
+              <h1>BOOK A TABLE</h1>
+              <p class="required-field">Required field <span>*</span></p>
+              <div class="book">
+                <div>
+                  <label for="date">Date <span>*</span></label>
+                  <input type="date" value="yyyy/dd/mm" id="date" required>
+                </div>
+                <div>
+                    <label for="guest">Number of Guests <i class="fa fa-users"></i></label>
+                    <input list="guests" name="guest" id="guest">
+                    <datalist id="guests">
+                      <option value="1 person">
+                      <option value="2 persons">
+                      <option value="3-5 persons">
+                      <option value="6-10 persons">
+                      <option value="11-15 persons">
+                      <option value="16-20 persons">
+                    </datalist>
+                </div>
+              </div>
+              <div class="book">
+                <div>
+                  <label for="time">Time <span>*</span></label>
+                  <input type="time" id="time" required>
+                </div>
+                <div>
+                    <label for="mode">Mode of Payment <i class="fa fa-credit-card"></i></label>
+                    <input list="modes" name="mode" id="mode">
+                    <datalist id="modes">
+                      <option value="Cash">
+                      <option value="E-wallet (Paypal, Gcash, Maya, etc.)">
+                      <option value="Card">
+                    </datalist>
+                </div>
+              </div>
+              <div class="request">
+                <label for="request">Special Requests (Optional)</label>
+                <textarea name="request" rows="5" id="request"></textarea>
+              </div>
+              <h1>Personal Information
+              </h1>
+              <div class="personal-info">
+                <label for="name">Name <i class="fa fa-user"> <span>*</span></i></label>
+                <input type="text" id="name" required>
+              </div>
+              <div class="personal-info">
+                <label for="address">Address <i class="fa fa-map-marker"> <span>*</span></i></label>
+                <input type="text" id="address" required>
+              </div>
+              <div class="contact-info">
+                <div>
+                  <label for="contact">Contact <i class="fa fa-phone"> <span>*</span></i></label>
+                  <input type="tel" id="contact" placeholder="+63XXX-XXX-XXXX" pattern="+63[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required>
+                </div>
+                <div>
+                  <label for="email">Email Address <i class="fa fa-envelope"> <span>*</span></i></label>
+                  <input type="email" id="email" placeholder="ex:myname@example.com" required>
+                </div>
+              </div><br>
+              <div class="btns">
+                <button onclick="confirmation()">Book Now</button>
+              </div>
+              <div class="clear">
+                <input type="reset" value="Clear form" onclick="clear()" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div>
+        <div class="location">
+          <div class="row_location" style="text-align:center">
+            <h3 class="padding-bottom-10 text-uppercase">VISIT OUR SHOP</h3>
+            <p><i class="fa fa-map-marker contact-fa"></i> 4501. Rizal St. Daraga, Albay</p>
+            <p><i class="fa fa-phone contact-fa"></i>
+              <a href="tel:010-020-0340" class="contact-link">+63923-456-7689</a>,
+              <a href="tel:080-090-0660" class="contact-link">+63921-653-3210</a>
+            </p>
+            <p><i class="fa fa-envelope-o contact-fa"></i>
+              <a href="mailto:hello@company.com" class="contact-link">midnightcafe@gmail.com</a>
+            </p>
+          </div>
+          <div class="row_location">
+            <h4 class="text-uppercase">OPENING HOURS</h4>
+            <p><i class="fa fa-bell-o contact-fa"></i> Monday to Friday</p>
+            <p> 7:00 AM - 2:00 AM</p>
+            <p><i class="fa fa-bell-o contact-fa"></i> Saturday to Sunday</p>
+            <p> 6:00 AM - 3:00 AM</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer">
+          <div class="footer-content">
+            <p> <a <href="#">Support |</a> <a <href="#">Terms of Use |</a> <a <href="#">Privacy Policy</a></p>
+            <ul class="socmed">
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <hr>
+            <p> All Rights Reserved &copy;2022 | MVD Company </p>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
